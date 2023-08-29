@@ -241,9 +241,9 @@ ul {
 	margin-bottom: 30px;
 }
 .about .content-right {
-	background: url(../images/about.jpg);
+	background: url(../images/intro.png);
 	background-size: cover;
-	background-position: 50% 100%;
+	background-position: 50% 50%;
 	height: 100%;
 	border-radius: 0 3px 3px 0;
 }

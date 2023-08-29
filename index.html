@@ -3,8 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+		<meta
+			name="description"
+			content="Personal web site of Dasun Ekanayake"
+		/>
+		<meta
+			name="keywords"
+			content="Dasun, Dasun Ekanayake, Dasunx, Dasun priyankara, priyankara"
+		/>
+		<meta name="author" content="Dasun Ekanayake" />
 		<link rel="icon" href="images/new/favicon-16x16.png" />
+
 		<title>Dasun Ekanayake</title>
 
 		<!-- font -->
@@ -23,7 +32,35 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
+
 	<body>
+	<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "110040590822802");
+      chatbox.setAttribute("attribution", "biz_inbox");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 		<!-- loader -->
 		<!-- <div class="fakeLoader"></div> -->
 		<!-- loader -->
@@ -83,14 +120,20 @@
 			<!-- end navbar -->
 
 			<!-- home intro -->
-			<div class="home-intro segments">
+			<div
+				class="home-intro segments"
+				itemscope
+				itemtype="https://schema.org/Person"
+			>
 				<div class="container">
 					<div class="intro-content box-content">
 						<div class="row justify-content-center">
 							<div class="col-md-8 col-sm-12 col-xs-12">
 								<div class="intro-caption">
-									<span>Dasun Ekanayake</span>
-									<h2>Fullstack developer</h2>
+									<span itemprop="name">Dasun Ekanayake</span>
+									<h2 itemprop="jobTitle">
+										Fullstack Software Engineer
+									</h2>
 									<a class="button" href="#contact"
 										>Contact Me</a
 									>
@@ -98,7 +141,11 @@
 							</div>
 							<div class="col-md-4 col-sm-12 col-xs-12">
 								<div class="intro-image">
-									<img src="images/intro.png" alt="" />
+									<img
+										src="images/about.jpg"
+										itemprop="image"
+										alt="Photo of Dasun Ekanayake"
+									/>
 								</div>
 							</div>
 						</div>
@@ -120,11 +167,11 @@
 									<h3>About Me</h3>
 								</div>
 								<div class="content">
-									<h2>I am a Fullstack Developer</h2>
+									<h2>I am a Fullstack Software Engineer</h2>
 									<p>
 										Currently reading my Software
-										engineering degree at SLLIT while
-										working as a Fullstack developer. Mobile
+										engineering degree at SLIIT while
+										working as a Fullstack Software Engineer. Mobile
 										applications, Web applications and
 										backend servers are my key areas.
 									</p>
@@ -787,6 +834,18 @@
 											><i class="fab fa-facebook-f"></i
 										></a>
 									</li>
+
+									<li>
+										<a
+											href="mailto:mwdasun@gmail.com"
+											itemprop="email"
+										>
+											<i
+												class="fa fa-envelope"
+												aria-hidden="true"
+											></i
+										></a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -878,6 +937,9 @@
 			<div class="container">
 				<div class="box-content">
 					<p>Dasun Ekanayake-2021</p>
+					<a href="https://www.dasunx.com" itemprop="url"
+						>dasunx.com</a
+					>
 				</div>
 			</div>
 		</div>
